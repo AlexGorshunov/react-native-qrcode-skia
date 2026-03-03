@@ -23,13 +23,13 @@ export const GapValues: Record<GapSize, number> = {
 };
 
 export const qrcodeState$ = observable({
-  qrUrl: 'https://qrcode.reactiive.io',
+  qrUrl: 'https://t.me/bliprobot',
   baseShape: 'circle' as BaseShapeOptions,
   eyePatternShape: 'rounded' as BaseShapeOptions,
   gap: 'sm' as GapSize,
   selectedGradient: 'linear' as GradientType,
   currentTheme: 'raindrop' as ThemeName,
-  selectedLogo: '🐨',
+  selectedLogo: '🤖',
   copyTrigger: 0,
 });
 
@@ -47,4 +47,4 @@ export const getCurrentTheme = () => {
   return Themes[themeName];
 };
 
-export const LogoEmojis = ['', '🐶', '🐰', '🦊', '🐼', '🐨'];
+export const LogoEmojis = ['', '🤖', '🐶', '🐰', '🦊', '🐼', '🐨'];

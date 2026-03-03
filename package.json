@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "example": "bun --filter react-native-qrcode-skia-example",
+    "deploy:build": "bash scripts/deploy-build.sh",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",

@@ -1,7 +1,7 @@
 import { ScrollViewStyleReset } from 'expo-router/html';
 import React from 'react';
 
-const SITE_URL = 'https://qrcode.reactiive.io';
+const SITE_URL = 'https://qrobotics.sargeras.ru';
 const TITLE = 'Skia QR Code Generator';
 const DESCRIPTION = 'Generate beautiful, customizable QR codes with React Native Skia. Features gradient colors, custom shapes, eye patterns, and logo support.';
 

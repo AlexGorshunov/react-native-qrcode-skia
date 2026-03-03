@@ -7,6 +7,7 @@ import { Colors, Spacing } from '../../design-tokens';
 
 const LogoLabels: Record<string, string> = {
   '': 'none',
+  '\uD83E\uDD16': 'robot',
   '\uD83D\uDC36': 'dog',
   '\uD83D\uDC30': 'bunny',
   '\uD83E\uDD8A': 'fox',
