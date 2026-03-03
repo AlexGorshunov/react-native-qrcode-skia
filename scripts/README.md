@@ -1,4 +1,4 @@
-# Деплой на qrobotics.sargeras.ru (HTTPS, Let's Encrypt)
+# Деплой на qr.sargeras.ru (HTTPS, Let's Encrypt)
 
 ## 1. Сборка приложения
 
@@ -12,10 +12,10 @@ bun run deploy:build
 
 ## 2. Деплой на сервер
 
-Скопируйте содержимое `example/dist/` на сервер в каталог, с которого будет отдавать nginx (по умолчанию `/var/www/qrobotics.sargeras.ru`):
+Скопируйте содержимое `example/dist/` на сервер в каталог, с которого будет отдавать nginx (по умолчанию `/var/www/qr.sargeras.ru`):
 
 ```bash
-rsync -av example/dist/ user@your-server:/var/www/qrobotics.sargeras.ru/
+rsync -av example/dist/ user@your-server:/var/www/qr.sargeras.ru/
 ```
 
 ## 3. Настройка HTTPS на сервере
@@ -25,10 +25,10 @@ rsync -av example/dist/ user@your-server:/var/www/qrobotics.sargeras.ru/
 1. Установите nginx и certbot:
    ```bash
    sudo apt update
-   sudo apt install nginx certbot python3-certbot-nginx
+   sudo apt install nginx certbot
    ```
 
-2. Убедитесь, что DNS для **qrobotics.sargeras.ru** указывает на IP этого сервера.
+2. Убедитесь, что DNS для **qr.sargeras.ru** и **www.qr.sargeras.ru** указывает на IP этого сервера.
 
 3. Скопируйте папку `scripts/` из репозитория на сервер.
 
@@ -38,7 +38,7 @@ rsync -av example/dist/ user@your-server:/var/www/qrobotics.sargeras.ru/
    sudo bash scripts/setup-https-nginx.sh
    ```
 
-Сайт будет доступен по **https://qrobotics.sargeras.ru**.
+Сайт будет доступен по **https://qr.sargeras.ru** и **https://www.qr.sargeras.ru**.
 
 ## Обновление сертификата
 

@@ -19,7 +19,7 @@ import { ExportButton } from './export-button';
 import { ImageExportButton } from './image-export-button';
 import { URLButton } from './url-button';
 import { MobileMenu } from './mobile-menu';
-import { GitHubIcon, MenuIcon } from '../icons';
+import { MenuIcon, TelegramIcon } from '../icons';
 import { HoverPressable } from '../hover-pressable';
 import { useResponsive } from '../../hooks/use-responsive';
 import { isEmbedded } from '../../hooks/use-embedded';
@@ -29,11 +29,11 @@ import { Colors, Spacing, Sizes, BorderRadius } from '../../design-tokens';
 
 const Separator = () => <View style={styles.separator} />;
 
-const GitHubButton = () => {
+const TELEGRAM_URL = 'https://t.me/bliprobot';
+
+const TelegramButton = () => {
   const onPress = useCallback(() => {
-    Linking.openURL(
-      'https://github.com/enzomanuelmangano/react-native-qrcode-skia'
-    );
+    Linking.openURL(TELEGRAM_URL);
   }, []);
 
   return (
@@ -42,7 +42,7 @@ const GitHubButton = () => {
       hoverStyle={styles.iconButtonHovered}
       onPress={onPress}
     >
-      <GitHubIcon />
+      <TelegramIcon />
     </HoverPressable>
   );
 };
@@ -103,7 +103,7 @@ export const Panel = ({ onURLButtonPress, drawerProgress }: PanelProps) => {
             <View style={styles.mobileActions}>
               {FeatureFlags.ENABLE_IMAGE_EXPORT && <ImageExportButton />}
               <ExportButton />
-              <GitHubButton />
+              <TelegramButton />
             </View>
           </View>
         </Animated.View>
@@ -139,7 +139,7 @@ export const Panel = ({ onURLButtonPress, drawerProgress }: PanelProps) => {
         <View style={styles.actions}>
           {FeatureFlags.ENABLE_IMAGE_EXPORT && <ImageExportButton />}
           <ExportButton />
-          <GitHubButton />
+          <TelegramButton />
         </View>
       </View>
     </Animated.View>

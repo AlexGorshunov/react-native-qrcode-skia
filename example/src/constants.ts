@@ -39,5 +39,5 @@ export type Theme = (typeof Themes)[ThemeName];
 
 // Feature Flags
 export const FeatureFlags = {
-  ENABLE_IMAGE_EXPORT: false,
+  ENABLE_IMAGE_EXPORT: true,
 } as const;

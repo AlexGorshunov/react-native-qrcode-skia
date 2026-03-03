@@ -7,6 +7,7 @@ import { useState, useCallback, useEffect } from 'react';
 import {
   StyleSheet,
   View,
+  Text,
   ActivityIndicator,
   useWindowDimensions,
 } from 'react-native';
@@ -74,6 +75,14 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <Animated.View style={[styles.content, contentAnimatedStyle]}>
+        <View style={styles.header}>
+          <Text style={styles.headerTitle}>
+            Сделано роботами для людей!
+          </Text>
+          <Text style={styles.headerSubtitle}>
+            Создай свой QR-код. Дизайн сделай сам.
+          </Text>
+        </View>
         <React.Suspense
           fallback={
             <View style={styles.loader}>
@@ -105,6 +114,25 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  header: {
+    alignItems: 'center',
+    marginBottom: 24,
+    paddingHorizontal: 20,
+  },
+  headerTitle: {
+    fontSize: 22,
+    fontWeight: '600',
+    color: Colors.textPrimary,
+    textAlign: 'center',
+    letterSpacing: 0.3,
+  },
+  headerSubtitle: {
+    marginTop: 8,
+    fontSize: 15,
+    color: Colors.textMuted,
+    textAlign: 'center',
+    letterSpacing: 0.2,
   },
   loader: {
     width: 320,

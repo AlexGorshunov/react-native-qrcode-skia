@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Сборка веб-приложения для деплоя на qrobotics.sargeras.ru
+# Сборка веб-приложения для деплоя на qr.sargeras.ru
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
